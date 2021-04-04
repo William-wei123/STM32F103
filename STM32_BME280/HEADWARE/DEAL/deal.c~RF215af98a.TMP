@@ -1,0 +1,70 @@
+#include "deal.h"
+#include "uart.h"
+#include "led.h"
+#include "delay.h"
+#include "PWM.h"
+void advance()
+{
+//	if(USART_RX_BUF=='A')
+//	{
+		TIM_SetCompare1(TIM1,500);
+		TIM_SetCompare2(TIM1,500);
+//	}
+//	 USART_RX_BUF='0';
+//			USART_Cmd(USART3,ENABLE);
+//			USART_RX_STA=0;
+}
+
+void counter()
+{
+//	if(USART_RX_BUF=='B')
+//	{
+		TIM_SetCompare1(TIM1,500);
+		TIM_SetCompare2(TIM1,500);
+//	}
+//	 USART_RX_BUF='0';
+//			USART_Cmd(USART3,ENABLE);
+//			USART_RX_STA=0;
+}
+
+void left()
+{
+//	if(USART_RX_BUF=='L')
+//	{
+		TIM_SetCompare1(TIM1,500);
+		TIM_SetCompare2(TIM1,500);
+//	}
+//	 USART_RX_BUF='0';
+//			USART_Cmd(USART3,ENABLE);
+//			USART_RX_STA=0;
+}
+
+void right()
+{
+//	if(USART_RX_BUF=='R')
+//	{
+//		TIM_SetCompare1(TIM1,500);
+//		TIM_SetCompare2(TIM1,500);
+		LED0=1;
+		LED1=1;
+//}
+//	 USART_RX_BUF='0';
+//			USART_Cmd(USART3,ENABLE);
+//			USART_RX_STA=0;
+}
+
+void stop()
+{
+//	if(USART_RX_BUF=='D')
+//	{
+//		TIM1_Init(25,0.5,300);
+//	  TIM8_Init(25,0.5,300);
+		LED0=~LED0;
+		LED1=~LED1;
+		delay_ms(500);
+	//}
+//	 USART_RX_BUF='0';
+//			USART_Cmd(USART3,ENABLE);
+//			USART_RX_STA=0;
+}
+

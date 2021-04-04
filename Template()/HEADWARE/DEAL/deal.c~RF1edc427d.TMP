@@ -1,0 +1,32 @@
+#include "deal.h"
+#include "uart.h"
+#include "led.h"
+#include "delay.h"
+
+void advance()
+{
+	if(USART_RX_BUF=='A')
+	{
+		LED0=0;
+		delay_ms(500);
+	}
+	 USART_RX_BUF='0';
+			USART_Cmd(USART1,ENABLE);
+			USART_RX_STA=0;
+}
+
+void counter()
+{
+	if(USART_RX_BUF=='B')
+	{
+		LED0=1;
+		LED1=0;
+		delay_ms(500);
+	}
+	 USART_RX_BUF='0';
+			USART_Cmd(USART1,ENABLE);
+			USART_RX_STA=0;
+}
+
+
+

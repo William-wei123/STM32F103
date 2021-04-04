@@ -1,0 +1,43 @@
+#include "stm32f10x.h"
+#include "adc.h"
+#include "pwm.h"
+#include "deal.h"
+
+#include "LIB_Config.h"
+#include "i2c_soft.h"
+//#include "spi_hard.h"
+#include "bme280_application.h"
+
+
+/************************************************
+ ALIENTEK ??STM32F103?????0
+ ????
+ ??,???????????????main?? 
+ ????:www.openedv.com
+ ????:http://eboard.taobao.com 
+ ???????????:"????",????STM32???
+ ?????????????  
+ ??:???? @ALIENTEK
+************************************************/
+
+
+void Delay(u32 count)
+{
+	u32 i=0;
+	for(;i<count;i++);
+}
+int main(void)
+{
+	Adc_Init();	
+	TIM1_PWM_Init(999,1);
+	while(1)
+	{
+		GPIO_ResetBits(GPIOB,GPIO_Pin_5);
+		GPIO_SetBits(GPIOE,GPIO_Pin_5);
+		Delay(3000000);
+		GPIO_SetBits(GPIOB,GPIO_Pin_5);
+		GPIO_ResetBits(GPIOE,GPIO_Pin_5);
+		Delay(3000000);
+	}
+}
+ 

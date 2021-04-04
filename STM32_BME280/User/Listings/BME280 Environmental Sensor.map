@@ -1,0 +1,866 @@
+Component: ARM Compiler 5.05 update 1 (build 106) Tool: armlink [4d0efa]
+
+==============================================================================
+
+Section Cross References
+
+    bme280_application.o(i.print_sensor_data) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    bme280_application.o(i.print_sensor_data) refers to _printf_f.o(.ARM.Collect$$_printf_percent$$00000003) for _printf_f
+    bme280_application.o(i.print_sensor_data) refers to printf1.o(x$fpl$printf1) for _printf_fp_dec
+    bme280_application.o(i.print_sensor_data) refers to ddiv.o(x$fpl$ddiv) for __aeabi_ddiv
+    bme280_application.o(i.print_sensor_data) refers to noretval__2printf.o(.text) for __2printf
+    bme280_application.o(i.stream_sensor_data_forced_mode) refers to bme280.o(i.bme280_set_sensor_settings) for bme280_set_sensor_settings
+    bme280_application.o(i.stream_sensor_data_forced_mode) refers to noretval__2printf.o(.text) for __2printf
+    bme280_application.o(i.stream_sensor_data_forced_mode) refers to bme280.o(i.bme280_set_sensor_mode) for bme280_set_sensor_mode
+    bme280_application.o(i.stream_sensor_data_forced_mode) refers to bme280.o(i.bme280_get_sensor_data) for bme280_get_sensor_data
+    bme280_application.o(i.stream_sensor_data_forced_mode) refers to bme280_application.o(i.print_sensor_data) for print_sensor_data
+    bme280_application.o(i.stream_sensor_data_normal_mode) refers to bme280.o(i.bme280_set_sensor_settings) for bme280_set_sensor_settings
+    bme280_application.o(i.stream_sensor_data_normal_mode) refers to bme280.o(i.bme280_set_sensor_mode) for bme280_set_sensor_mode
+    bme280_application.o(i.stream_sensor_data_normal_mode) refers to noretval__2printf.o(.text) for __2printf
+    bme280_application.o(i.stream_sensor_data_normal_mode) refers to bme280.o(i.bme280_get_sensor_data) for bme280_get_sensor_data
+    bme280_application.o(i.stream_sensor_data_normal_mode) refers to bme280_application.o(i.print_sensor_data) for print_sensor_data
+    bme280.o(i.bme280_compensate_data) refers to bme280.o(i.compensate_temperature) for compensate_temperature
+    bme280.o(i.bme280_compensate_data) refers to bme280.o(i.compensate_pressure) for compensate_pressure
+    bme280.o(i.bme280_compensate_data) refers to bme280.o(i.compensate_humidity) for compensate_humidity
+    bme280.o(i.bme280_get_regs) refers to bme280.o(i.null_ptr_check) for null_ptr_check
+    bme280.o(i.bme280_get_sensor_data) refers to bme280.o(i.null_ptr_check) for null_ptr_check
+    bme280.o(i.bme280_get_sensor_data) refers to bme280.o(i.bme280_get_regs) for bme280_get_regs
+    bme280.o(i.bme280_get_sensor_data) refers to bme280.o(i.bme280_parse_sensor_data) for bme280_parse_sensor_data
+    bme280.o(i.bme280_get_sensor_data) refers to bme280.o(i.bme280_compensate_data) for bme280_compensate_data
+    bme280.o(i.bme280_get_sensor_mode) refers to bme280.o(i.null_ptr_check) for null_ptr_check
+    bme280.o(i.bme280_get_sensor_mode) refers to bme280.o(i.bme280_get_regs) for bme280_get_regs
+    bme280.o(i.bme280_get_sensor_settings) refers to bme280.o(i.null_ptr_check) for null_ptr_check
+    bme280.o(i.bme280_get_sensor_settings) refers to bme280.o(i.bme280_get_regs) for bme280_get_regs
+    bme280.o(i.bme280_get_sensor_settings) refers to bme280.o(i.parse_device_settings) for parse_device_settings
+    bme280.o(i.bme280_init) refers to bme280.o(i.null_ptr_check) for null_ptr_check
+    bme280.o(i.bme280_init) refers to bme280.o(i.bme280_get_regs) for bme280_get_regs
+    bme280.o(i.bme280_init) refers to bme280.o(i.bme280_soft_reset) for bme280_soft_reset
+    bme280.o(i.bme280_init) refers to bme280.o(i.get_calib_data) for get_calib_data
+    bme280.o(i.bme280_set_regs) refers to bme280.o(i.null_ptr_check) for null_ptr_check
+    bme280.o(i.bme280_set_regs) refers to bme280.o(i.interleave_reg_addr) for interleave_reg_addr
+    bme280.o(i.bme280_set_sensor_mode) refers to bme280.o(i.null_ptr_check) for null_ptr_check
+    bme280.o(i.bme280_set_sensor_mode) refers to bme280.o(i.bme280_get_sensor_mode) for bme280_get_sensor_mode
+    bme280.o(i.bme280_set_sensor_mode) refers to bme280.o(i.put_device_to_sleep) for put_device_to_sleep
+    bme280.o(i.bme280_set_sensor_mode) refers to bme280.o(i.write_power_mode) for write_power_mode
+    bme280.o(i.bme280_set_sensor_settings) refers to bme280.o(i.null_ptr_check) for null_ptr_check
+    bme280.o(i.bme280_set_sensor_settings) refers to bme280.o(i.bme280_get_sensor_mode) for bme280_get_sensor_mode
+    bme280.o(i.bme280_set_sensor_settings) refers to bme280.o(i.put_device_to_sleep) for put_device_to_sleep
+    bme280.o(i.bme280_set_sensor_settings) refers to bme280.o(i.are_settings_changed) for are_settings_changed
+    bme280.o(i.bme280_set_sensor_settings) refers to bme280.o(i.set_osr_settings) for set_osr_settings
+    bme280.o(i.bme280_set_sensor_settings) refers to bme280.o(i.set_filter_standby_settings) for set_filter_standby_settings
+    bme280.o(i.bme280_soft_reset) refers to bme280.o(i.null_ptr_check) for null_ptr_check
+    bme280.o(i.bme280_soft_reset) refers to bme280.o(i.bme280_set_regs) for bme280_set_regs
+    bme280.o(i.compensate_humidity) refers to dflt_clz.o(x$fpl$dflt) for __aeabi_i2d
+    bme280.o(i.compensate_humidity) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
+    bme280.o(i.compensate_humidity) refers to ddiv.o(x$fpl$ddiv) for __aeabi_ddiv
+    bme280.o(i.compensate_humidity) refers to dmul.o(x$fpl$dmul) for __aeabi_dmul
+    bme280.o(i.compensate_humidity) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
+    bme280.o(i.compensate_humidity) refers to dflt_clz.o(x$fpl$dfltu) for __aeabi_ui2d
+    bme280.o(i.compensate_humidity) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
+    bme280.o(i.compensate_humidity) refers to drleqf.o(x$fpl$drleqf) for __aeabi_cdrcmple
+    bme280.o(i.compensate_humidity) refers to dleqf.o(x$fpl$dleqf) for __aeabi_cdcmple
+    bme280.o(i.compensate_pressure) refers to dflt_clz.o(x$fpl$dflt) for __aeabi_i2d
+    bme280.o(i.compensate_pressure) refers to ddiv.o(x$fpl$ddiv) for __aeabi_ddiv
+    bme280.o(i.compensate_pressure) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
+    bme280.o(i.compensate_pressure) refers to dmul.o(x$fpl$dmul) for __aeabi_dmul
+    bme280.o(i.compensate_pressure) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
+    bme280.o(i.compensate_pressure) refers to dflt_clz.o(x$fpl$dfltu) for __aeabi_ui2d
+    bme280.o(i.compensate_pressure) refers to deqf.o(x$fpl$deqf) for __aeabi_cdcmpeq
+    bme280.o(i.compensate_pressure) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
+    bme280.o(i.compensate_pressure) refers to dleqf.o(x$fpl$dleqf) for __aeabi_cdcmple
+    bme280.o(i.compensate_pressure) refers to drleqf.o(x$fpl$drleqf) for __aeabi_cdrcmple
+    bme280.o(i.compensate_temperature) refers to dflt_clz.o(x$fpl$dfltu) for __aeabi_ui2d
+    bme280.o(i.compensate_temperature) refers to ddiv.o(x$fpl$ddiv) for __aeabi_ddiv
+    bme280.o(i.compensate_temperature) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
+    bme280.o(i.compensate_temperature) refers to dflt_clz.o(x$fpl$dflt) for __aeabi_i2d
+    bme280.o(i.compensate_temperature) refers to dmul.o(x$fpl$dmul) for __aeabi_dmul
+    bme280.o(i.compensate_temperature) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
+    bme280.o(i.compensate_temperature) refers to dfix.o(x$fpl$dfix) for __aeabi_d2iz
+    bme280.o(i.compensate_temperature) refers to dleqf.o(x$fpl$dleqf) for __aeabi_cdcmple
+    bme280.o(i.compensate_temperature) refers to drleqf.o(x$fpl$drleqf) for __aeabi_cdrcmple
+    bme280.o(i.get_calib_data) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    bme280.o(i.get_calib_data) refers to bme280.o(i.bme280_get_regs) for bme280_get_regs
+    bme280.o(i.get_calib_data) refers to bme280.o(i.parse_temp_press_calib_data) for parse_temp_press_calib_data
+    bme280.o(i.get_calib_data) refers to bme280.o(i.parse_humidity_calib_data) for parse_humidity_calib_data
+    bme280.o(i.put_device_to_sleep) refers to bme280.o(i.bme280_get_regs) for bme280_get_regs
+    bme280.o(i.put_device_to_sleep) refers to bme280.o(i.parse_device_settings) for parse_device_settings
+    bme280.o(i.put_device_to_sleep) refers to bme280.o(i.bme280_soft_reset) for bme280_soft_reset
+    bme280.o(i.put_device_to_sleep) refers to bme280.o(i.reload_device_settings) for reload_device_settings
+    bme280.o(i.reload_device_settings) refers to bme280.o(i.set_osr_settings) for set_osr_settings
+    bme280.o(i.reload_device_settings) refers to bme280.o(i.set_filter_standby_settings) for set_filter_standby_settings
+    bme280.o(i.set_filter_standby_settings) refers to bme280.o(i.bme280_get_regs) for bme280_get_regs
+    bme280.o(i.set_filter_standby_settings) refers to bme280.o(i.fill_filter_settings) for fill_filter_settings
+    bme280.o(i.set_filter_standby_settings) refers to bme280.o(i.fill_standby_settings) for fill_standby_settings
+    bme280.o(i.set_filter_standby_settings) refers to bme280.o(i.bme280_set_regs) for bme280_set_regs
+    bme280.o(i.set_osr_humidity_settings) refers to bme280.o(i.bme280_set_regs) for bme280_set_regs
+    bme280.o(i.set_osr_humidity_settings) refers to bme280.o(i.bme280_get_regs) for bme280_get_regs
+    bme280.o(i.set_osr_press_temp_settings) refers to bme280.o(i.bme280_get_regs) for bme280_get_regs
+    bme280.o(i.set_osr_press_temp_settings) refers to bme280.o(i.fill_osr_press_settings) for fill_osr_press_settings
+    bme280.o(i.set_osr_press_temp_settings) refers to bme280.o(i.fill_osr_temp_settings) for fill_osr_temp_settings
+    bme280.o(i.set_osr_press_temp_settings) refers to bme280.o(i.bme280_set_regs) for bme280_set_regs
+    bme280.o(i.set_osr_settings) refers to bme280.o(i.set_osr_humidity_settings) for set_osr_humidity_settings
+    bme280.o(i.set_osr_settings) refers to bme280.o(i.set_osr_press_temp_settings) for set_osr_press_temp_settings
+    bme280.o(i.write_power_mode) refers to bme280.o(i.bme280_get_regs) for bme280_get_regs
+    bme280.o(i.write_power_mode) refers to bme280.o(i.bme280_set_regs) for bme280_set_regs
+    bme280_selftest.o(i.bme280_crc_selftest) refers to bme280.o(i.bme280_get_regs) for bme280_get_regs
+    bme280_selftest.o(i.bme280_crc_selftest) refers to bme280_selftest.o(i.crc_calculate) for crc_calculate
+    i2c_soft.o(i.I2c_Soft_Ask) refers to i2c_soft.o(i.I2c_Soft_delay) for I2c_Soft_delay
+    i2c_soft.o(i.I2c_Soft_Init) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    i2c_soft.o(i.I2c_Soft_Init) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    i2c_soft.o(i.I2c_Soft_NoAsk) refers to i2c_soft.o(i.I2c_Soft_delay) for I2c_Soft_delay
+    i2c_soft.o(i.I2c_Soft_ReadByte) refers to i2c_soft.o(i.I2c_Soft_delay) for I2c_Soft_delay
+    i2c_soft.o(i.I2c_Soft_ReadByte) refers to i2c_soft.o(i.I2c_Soft_Ask) for I2c_Soft_Ask
+    i2c_soft.o(i.I2c_Soft_ReadByte) refers to i2c_soft.o(i.I2c_Soft_NoAsk) for I2c_Soft_NoAsk
+    i2c_soft.o(i.I2c_Soft_SendByte) refers to i2c_soft.o(i.I2c_Soft_delay) for I2c_Soft_delay
+    i2c_soft.o(i.I2c_Soft_Start) refers to i2c_soft.o(i.I2c_Soft_delay) for I2c_Soft_delay
+    i2c_soft.o(i.I2c_Soft_Stop) refers to i2c_soft.o(i.I2c_Soft_delay) for I2c_Soft_delay
+    i2c_soft.o(i.I2c_Soft_WaitAsk) refers to i2c_soft.o(i.I2c_Soft_delay) for I2c_Soft_delay
+    i2c_soft.o(i.I2c_Soft_WaitAsk) refers to i2c_soft.o(i.I2c_Soft_Stop) for I2c_Soft_Stop
+    i2c_soft.o(i.I2c_Soft_delay) refers to i2c_soft.o(.data) for I2C_FastMode
+    i2c_soft.o(i.IIC_Read_1Byte) refers to i2c_soft.o(i.I2c_Soft_Start) for I2c_Soft_Start
+    i2c_soft.o(i.IIC_Read_1Byte) refers to i2c_soft.o(i.I2c_Soft_SendByte) for I2c_Soft_SendByte
+    i2c_soft.o(i.IIC_Read_1Byte) refers to i2c_soft.o(i.I2c_Soft_WaitAsk) for I2c_Soft_WaitAsk
+    i2c_soft.o(i.IIC_Read_1Byte) refers to i2c_soft.o(i.I2c_Soft_Stop) for I2c_Soft_Stop
+    i2c_soft.o(i.IIC_Read_1Byte) refers to i2c_soft.o(i.I2c_Soft_ReadByte) for I2c_Soft_ReadByte
+    i2c_soft.o(i.IIC_Read_nByte) refers to i2c_soft.o(i.I2c_Soft_Start) for I2c_Soft_Start
+    i2c_soft.o(i.IIC_Read_nByte) refers to i2c_soft.o(i.I2c_Soft_SendByte) for I2c_Soft_SendByte
+    i2c_soft.o(i.IIC_Read_nByte) refers to i2c_soft.o(i.I2c_Soft_WaitAsk) for I2c_Soft_WaitAsk
+    i2c_soft.o(i.IIC_Read_nByte) refers to i2c_soft.o(i.I2c_Soft_Stop) for I2c_Soft_Stop
+    i2c_soft.o(i.IIC_Read_nByte) refers to i2c_soft.o(i.I2c_Soft_ReadByte) for I2c_Soft_ReadByte
+    i2c_soft.o(i.IIC_Write_1Byte) refers to i2c_soft.o(i.I2c_Soft_Start) for I2c_Soft_Start
+    i2c_soft.o(i.IIC_Write_1Byte) refers to i2c_soft.o(i.I2c_Soft_SendByte) for I2c_Soft_SendByte
+    i2c_soft.o(i.IIC_Write_1Byte) refers to i2c_soft.o(i.I2c_Soft_WaitAsk) for I2c_Soft_WaitAsk
+    i2c_soft.o(i.IIC_Write_1Byte) refers to i2c_soft.o(i.I2c_Soft_Stop) for I2c_Soft_Stop
+    i2c_soft.o(i.IIC_Write_nByte) refers to i2c_soft.o(i.I2c_Soft_Start) for I2c_Soft_Start
+    i2c_soft.o(i.IIC_Write_nByte) refers to i2c_soft.o(i.I2c_Soft_SendByte) for I2c_Soft_SendByte
+    i2c_soft.o(i.IIC_Write_nByte) refers to i2c_soft.o(i.I2c_Soft_WaitAsk) for I2c_Soft_WaitAsk
+    i2c_soft.o(i.IIC_Write_nByte) refers to i2c_soft.o(i.I2c_Soft_Stop) for I2c_Soft_Stop
+    i2c_soft.o(i.user_i2c_read) refers to i2c_soft.o(i.IIC_Read_nByte) for IIC_Read_nByte
+    i2c_soft.o(i.user_i2c_read) refers to i2c_soft.o(.data) for I2C_FastMode
+    i2c_soft.o(i.user_i2c_write) refers to i2c_soft.o(i.IIC_Write_nByte) for IIC_Write_nByte
+    i2c_soft.o(i.user_i2c_write) refers to i2c_soft.o(.data) for I2C_FastMode
+    spi_hard.o(i.SPI1_Init) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    spi_hard.o(i.SPI1_Init) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    spi_hard.o(i.SPI1_Init) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    spi_hard.o(i.SPI1_Init) refers to stm32f10x_spi.o(i.SPI_Init) for SPI_Init
+    spi_hard.o(i.SPI1_Init) refers to stm32f10x_spi.o(i.SPI_Cmd) for SPI_Cmd
+    spi_hard.o(i.SPI1_Init) refers to spi_hard.o(i.SPI1_ReadWriteByte) for SPI1_ReadWriteByte
+    spi_hard.o(i.SPI1_Init) refers to spi_hard.o(.bss) for SPI_InitStructure
+    spi_hard.o(i.SPI1_ReadWriteByte) refers to stm32f10x_spi.o(i.SPI_I2S_GetFlagStatus) for SPI_I2S_GetFlagStatus
+    spi_hard.o(i.SPI1_ReadWriteByte) refers to stm32f10x_spi.o(i.SPI_I2S_SendData) for SPI_I2S_SendData
+    spi_hard.o(i.SPI1_ReadWriteByte) refers to stm32f10x_spi.o(i.SPI_I2S_ReceiveData) for SPI_I2S_ReceiveData
+    spi_hard.o(i.SPI1_SetSpeed) refers to stm32f10x_spi.o(i.SPI_Init) for SPI_Init
+    spi_hard.o(i.SPI1_SetSpeed) refers to stm32f10x_spi.o(i.SPI_Cmd) for SPI_Cmd
+    spi_hard.o(i.SPI1_SetSpeed) refers to spi_hard.o(.bss) for SPI_InitStructure
+    spi_hard.o(i.SPI_BME280_CS_High) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    spi_hard.o(i.SPI_BME280_CS_Low) refers to stm32f10x_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
+    spi_hard.o(i.SPI_CS_Init) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    spi_hard.o(i.SPI_CS_Init) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    spi_hard.o(i.SPI_CS_Init) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    spi_hard.o(i.SPI_CS_Init) refers to spi_hard.o(i.SPI1_Init) for SPI1_Init
+    spi_hard.o(i.SPI_CS_Init) refers to spi_hard.o(i.SPI1_SetSpeed) for SPI1_SetSpeed
+    spi_hard.o(i.user_spi_read) refers to spi_hard.o(i.SPI_BME280_CS_High) for SPI_BME280_CS_High
+    spi_hard.o(i.user_spi_read) refers to spi_hard.o(i.SPI_BME280_CS_Low) for SPI_BME280_CS_Low
+    spi_hard.o(i.user_spi_read) refers to spi_hard.o(i.SPI1_ReadWriteByte) for SPI1_ReadWriteByte
+    spi_hard.o(i.user_spi_write) refers to spi_hard.o(i.SPI_BME280_CS_High) for SPI_BME280_CS_High
+    spi_hard.o(i.user_spi_write) refers to spi_hard.o(i.SPI_BME280_CS_Low) for SPI_BME280_CS_Low
+    spi_hard.o(i.user_spi_write) refers to spi_hard.o(i.SPI1_ReadWriteByte) for SPI1_ReadWriteByte
+    system_stm32f10x.o(i.SetSysClock) refers to system_stm32f10x.o(i.SetSysClockTo72) for SetSysClockTo72
+    system_stm32f10x.o(i.SystemCoreClockUpdate) refers to system_stm32f10x.o(.data) for SystemCoreClock
+    system_stm32f10x.o(i.SystemInit) refers to system_stm32f10x.o(i.SetSysClock) for SetSysClock
+    startup_stm32f10x_md.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(.text) for Reset_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.NMI_Handler) for NMI_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.HardFault_Handler) for HardFault_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.MemManage_Handler) for MemManage_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.BusFault_Handler) for BusFault_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.UsageFault_Handler) for UsageFault_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.SVC_Handler) for SVC_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.DebugMon_Handler) for DebugMon_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.PendSV_Handler) for PendSV_Handler
+    startup_stm32f10x_md.o(RESET) refers to config.o(i.SysTick_Handler) for SysTick_Handler
+    startup_stm32f10x_md.o(RESET) refers to usart_1.o(i.USART1_IRQHandler) for USART1_IRQHandler
+    startup_stm32f10x_md.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(.text) refers to system_stm32f10x.o(i.SystemInit) for SystemInit
+    startup_stm32f10x_md.o(.text) refers to __main.o(!!!main) for __main
+    startup_stm32f10x_md.o(.text) refers to startup_stm32f10x_md.o(HEAP) for Heap_Mem
+    startup_stm32f10x_md.o(.text) refers to startup_stm32f10x_md.o(STACK) for Stack_Mem
+    stm32f10x_rcc.o(i.RCC_GetClocksFreq) refers to stm32f10x_rcc.o(.data) for APBAHBPrescTable
+    stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp) refers to stm32f10x_rcc.o(i.RCC_GetFlagStatus) for RCC_GetFlagStatus
+    stm32f10x_usart.o(i.USART_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_usart.o(i.USART_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
+    stm32f10x_usart.o(i.USART_Init) refers to stm32f10x_rcc.o(i.RCC_GetClocksFreq) for RCC_GetClocksFreq
+    stm32f10x_gpio.o(i.GPIO_AFIODeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_gpio.o(i.GPIO_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_spi.o(i.I2S_Init) refers to stm32f10x_rcc.o(i.RCC_GetClocksFreq) for RCC_GetClocksFreq
+    stm32f10x_spi.o(i.SPI_I2S_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_spi.o(i.SPI_I2S_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
+    config.o(i.device_init) refers to config.o(i.system_clock_set) for system_clock_set
+    config.o(i.device_init) refers to config.o(i.system_tick_init) for system_tick_init
+    config.o(i.device_init) refers to config.o(i.port_init) for port_init
+    config.o(i.device_init) refers to config.o(i.usart2_Init) for usart2_Init
+    config.o(i.port_init) refers to stm32f10x_gpio.o(i.GPIO_PinRemapConfig) for GPIO_PinRemapConfig
+    config.o(i.port_init) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    config.o(i.port_init) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    config.o(i.system_clock_set) refers to system_stm32f10x.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    config.o(i.system_init) refers to config.o(i.device_init) for device_init
+    config.o(i.system_init) refers to config.o(i.driver_init) for driver_init
+    config.o(i.system_tick_init) refers to stm32f10x_rcc.o(i.RCC_GetClocksFreq) for RCC_GetClocksFreq
+    config.o(i.system_tick_init) refers to delay.o(i.delay_init) for delay_init
+    config.o(i.system_tick_init) refers to delay_2.o(i.delay_init) for delay_init
+    config.o(i.usart2_Init) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd) for RCC_APB1PeriphClockCmd
+    config.o(i.usart2_Init) refers to stm32f10x_usart.o(i.USART_Init) for USART_Init
+    config.o(i.usart2_Init) refers to stm32f10x_usart.o(i.USART_Cmd) for USART_Cmd
+    main.o(i.main) refers to config.o(i.system_init) for system_init
+    main.o(i.main) refers to i2c_soft.o(i.I2c_Soft_Init) for I2c_Soft_Init
+    main.o(i.main) refers to bme280.o(i.bme280_init) for bme280_init
+    main.o(i.main) refers to noretval__2printf.o(.text) for __2printf
+    main.o(i.main) refers to bme280_application.o(i.stream_sensor_data_normal_mode) for stream_sensor_data_normal_mode
+    main.o(i.main) refers to i2c_soft.o(i.user_i2c_read) for user_i2c_read
+    main.o(i.main) refers to i2c_soft.o(i.user_i2c_write) for user_i2c_write
+    main.o(i.main) refers to delay.o(i.user_delay_ms) for user_delay_ms
+    main.o(i.main) refers to main.o(.conststring) for .conststring
+    delay.o(i.delay_init) refers to misc.o(i.SysTick_CLKSourceConfig) for SysTick_CLKSourceConfig
+    delay.o(i.delay_init) refers to delay.o(.data) for s_chFacMicro
+    delay.o(i.delay_ms) refers to delay.o(.data) for s_hwFacMill
+    delay.o(i.delay_us) refers to delay.o(.data) for s_chFacMicro
+    delay.o(i.user_delay_ms) refers to delay.o(.data) for s_hwFacMill
+    adc.o(i.ADC_get_v) refers to adc.o(i.Get_Adc_Average) for Get_Adc_Average
+    adc.o(i.ADC_get_v) refers to dflt_clz.o(x$fpl$dfltu) for __aeabi_ui2d
+    adc.o(i.ADC_get_v) refers to dmul.o(x$fpl$dmul) for __aeabi_dmul
+    adc.o(i.ADC_get_v) refers to d2f.o(x$fpl$d2f) for __aeabi_d2f
+    adc.o(i.ADC_get_v) refers to ffix.o(x$fpl$ffix) for __aeabi_f2iz
+    adc.o(i.ADC_get_v) refers to fflt_clz.o(x$fpl$ffltu) for __aeabi_ui2f
+    adc.o(i.ADC_get_v) refers to faddsub_clz.o(x$fpl$frsb) for __aeabi_frsub
+    adc.o(i.ADC_get_v) refers to fmul.o(x$fpl$fmul) for __aeabi_fmul
+    adc.o(i.ADC_get_v) refers to ffixu.o(x$fpl$ffixu) for __aeabi_f2uiz
+    adc.o(i.ADC_get_v) refers to ddiv.o(x$fpl$ddiv) for __aeabi_ddiv
+    adc.o(i.ADC_get_v) refers to faddsub_clz.o(x$fpl$fadd) for __aeabi_fadd
+    adc.o(i.ADC_get_v) refers to adc.o(.data) for Aver_ch_v
+    adc.o(i.Adc_Init) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    adc.o(i.Adc_Init) refers to stm32f10x_rcc.o(i.RCC_ADCCLKConfig) for RCC_ADCCLKConfig
+    adc.o(i.Adc_Init) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    adc.o(i.Get_Adc_Average) refers to adc.o(i.Get_Adc) for Get_Adc
+    adc.o(i.Get_Adc_Average) refers to delay.o(i.delay_ms) for delay_ms
+    adc.o(i.Get_Adc_Average) refers to delay_2.o(i.delay_ms) for delay_ms
+    mywifi.o(i.Acceive_DATA) refers to oled.o(i.Clear_OLED) for Clear_OLED
+    mywifi.o(i.Acceive_DATA) refers to oled.o(i.show_Str) for show_Str
+    mywifi.o(i.Acceive_DATA) refers to mywifi.o(i.DATA_HANDLE) for DATA_HANDLE
+    mywifi.o(i.Acceive_DATA) refers to usart_1.o(.data) for USART_RX_STA
+    mywifi.o(i.Acceive_DATA) refers to usart_1.o(.bss) for USART_RX_BUF
+    mywifi.o(i.Acceive_DATA) refers to mywifi.o(.data) for Send_flag
+    mywifi.o(i.Acceive_DATA) refers to mywifi.o(.bss) for DATA_Acc
+    mywifi.o(i.DATA_HANDLE) refers to oled.o(i.show_Str) for show_Str
+    mywifi.o(i.DATA_HANDLE) refers to mywifi.o(i.char_To_int) for char_To_int
+    mywifi.o(i.DATA_HANDLE) refers to mywifi.o(.data) for Acc_DATA_LEN
+    mywifi.o(i.DATA_To_COM) refers to mywifi.o(i.NUM_TO_STR) for NUM_TO_STR
+    mywifi.o(i.DATA_To_COM) refers to mywifi.o(.data) for COM_DATA_Lenght
+    mywifi.o(i.Duoble_TO_STR) refers to dflt_clz.o(x$fpl$dfltu) for __aeabi_ui2d
+    mywifi.o(i.Duoble_TO_STR) refers to pow.o(i.pow) for pow
+    mywifi.o(i.Duoble_TO_STR) refers to dmul.o(x$fpl$dmul) for __aeabi_dmul
+    mywifi.o(i.Duoble_TO_STR) refers to ddiv.o(x$fpl$ddiv) for __aeabi_ddiv
+    mywifi.o(i.Duoble_TO_STR) refers to dfix.o(x$fpl$dfix) for __aeabi_d2iz
+    mywifi.o(i.MyWIFI_Init) refers to mywifi.o(i.WIFI_Send) for WIFI_Send
+    mywifi.o(i.MyWIFI_Init) refers to delay.o(i.delay_ms) for delay_ms
+    mywifi.o(i.MyWIFI_Init) refers to delay_2.o(i.delay_ms) for delay_ms
+    mywifi.o(i.MyWIFI_Init) refers to mywifi.o(i.WIFI_Send_DATA) for WIFI_Send_DATA
+    mywifi.o(i.MyWIFI_Init) refers to mywifi.o(.data) for COM_Conect
+    mywifi.o(i.Send_Double) refers to mywifi.o(i.Duoble_TO_STR) for Duoble_TO_STR
+    mywifi.o(i.Send_Double) refers to mywifi.o(i.WIFI_Send_DATA) for WIFI_Send_DATA
+    mywifi.o(i.Send_Int) refers to mywifi.o(i.NUM_TO_STR) for NUM_TO_STR
+    mywifi.o(i.Send_Int) refers to mywifi.o(i.WIFI_Send_DATA) for WIFI_Send_DATA
+    mywifi.o(i.WIFI_Send) refers to usart_1.o(i.USART1_Send_Str) for USART1_Send_Str
+    mywifi.o(i.WIFI_Send) refers to mywifi.o(i.Send_New_Line) for Send_New_Line
+    mywifi.o(i.WIFI_Send) refers to delay.o(i.delay_ms) for delay_ms
+    mywifi.o(i.WIFI_Send) refers to delay_2.o(i.delay_ms) for delay_ms
+    mywifi.o(i.WIFI_Send) refers to mywifi.o(i.WIFI_XIAOYANG) for WIFI_XIAOYANG
+    mywifi.o(i.WIFI_Send) refers to usart_1.o(.bss) for USART_RX_BUF
+    mywifi.o(i.WIFI_Send) refers to usart_1.o(.data) for USART_RX_STA
+    mywifi.o(i.WIFI_Send) refers to mywifi.o(.data) for COM_Conect
+    mywifi.o(i.WIFI_Send_DATA) refers to usart_1.o(i.USART1_Send_Str) for USART1_Send_Str
+    mywifi.o(i.WIFI_Send_DATA) refers to mywifi.o(i.DATA_To_COM) for DATA_To_COM
+    mywifi.o(i.WIFI_Send_DATA) refers to mywifi.o(i.WIFI_Send) for WIFI_Send
+    mywifi.o(i.WIFI_Send_DATA) refers to delay.o(i.delay_ms) for delay_ms
+    mywifi.o(i.WIFI_Send_DATA) refers to delay_2.o(i.delay_ms) for delay_ms
+    mywifi.o(i.WIFI_Send_DATA) refers to mywifi.o(i.Send_New_Line) for Send_New_Line
+    mywifi.o(i.WIFI_Send_DATA) refers to mywifi.o(.data) for COM_DATA_Lenght
+    mywifi.o(i.WIFI_XIAOYANG) refers to oled.o(i.Clear_OLED) for Clear_OLED
+    mywifi.o(i.WIFI_XIAOYANG) refers to oled.o(i.show_Str) for show_Str
+    mywifi.o(i.WIFI_XIAOYANG) refers to mywifi.o(i.WIFI_Send) for WIFI_Send
+    mywifi.o(i.WIFI_XIAOYANG) refers to usart_1.o(.bss) for USART_RX_BUF
+    mywifi.o(i.WIFI_XIAOYANG) refers to usart_1.o(.data) for USART_RX_STA
+    mywifi.o(i.WIFI_XIAOYANG) refers to mywifi.o(.data) for COM_Conect_Sever
+    mywifi.o(i.char_To_int) refers to dflt_clz.o(x$fpl$dflt) for __aeabi_i2d
+    mywifi.o(i.char_To_int) refers to pow.o(i.pow) for pow
+    mywifi.o(i.char_To_int) refers to dmul.o(x$fpl$dmul) for __aeabi_dmul
+    mywifi.o(i.char_To_int) refers to dfix.o(x$fpl$dfix) for __aeabi_d2iz
+    mywifi.o(.data) refers to mywifi.o(.conststring) for .conststring
+    oled.o(i.Clear_OLED) refers to oled.o(i.OLED_WCMD) for OLED_WCMD
+    oled.o(i.Clear_OLED) refers to oled.o(i.OLED_WDATA) for OLED_WDATA
+    oled.o(i.Horizontal_Scroll) refers to oled.o(i.OLED_WCMD) for OLED_WCMD
+    oled.o(i.OLED_Display_On) refers to oled.o(i.OLED_WCMD) for OLED_WCMD
+    oled.o(i.OLED_Init) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    oled.o(i.OLED_Init) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    oled.o(i.OLED_Init) refers to oled.o(i.OLED_WCMD) for OLED_WCMD
+    oled.o(i.OLED_Init) refers to oled.o(i.Clear_OLED) for Clear_OLED
+    oled.o(i.OLED_SHOW16X16) refers to oled.o(i.OLED_WCMD) for OLED_WCMD
+    oled.o(i.OLED_SHOW16X16) refers to oled.o(i.OLED_WDATA) for OLED_WDATA
+    oled.o(i.OLED_SHOWNumber) refers to dflt_clz.o(x$fpl$dflt) for __aeabi_i2d
+    oled.o(i.OLED_SHOWNumber) refers to pow.o(i.pow) for pow
+    oled.o(i.OLED_SHOWNumber) refers to dfixu.o(x$fpl$dfixu) for __aeabi_d2uiz
+    oled.o(i.OLED_SHOWNumber) refers to oled.o(i.OLED_WCMD) for OLED_WCMD
+    oled.o(i.OLED_SHOWNumber) refers to oled.o(i.OLED_WDATA) for OLED_WDATA
+    oled.o(i.OLED_SHOWNumber) refers to oled.o(.data) for number
+    oled.o(i.OLED_SHOW_DRAW) refers to oled.o(i.OLED_WCMD) for OLED_WCMD
+    oled.o(i.OLED_SHOW_DRAW) refers to oled.o(i.OLED_WDATA) for OLED_WDATA
+    oled.o(i.OLED_WDATA) refers to delay.o(i.delay_us) for delay_us
+    oled.o(i.OLED_WDATA) refers to delay_2.o(i.delay_us) for delay_us
+    oled.o(i.Vertical_and_Horizontal_Scroll) refers to oled.o(i.OLED_WCMD) for OLED_WCMD
+    oled.o(i.show_Str) refers to oled.o(i.show_char) for show_char
+    oled.o(i.show_char) refers to oled.o(i.OLED_WCMD) for OLED_WCMD
+    oled.o(i.show_char) refers to oled.o(i.OLED_WDATA) for OLED_WDATA
+    oled.o(i.show_char) refers to oled.o(.constdata) for asc2_1608
+    pwm.o(i.TIM1_PWM_Init) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    pwm.o(i.TIM1_PWM_Init) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    delay_2.o(i.delay_init) refers to misc.o(i.SysTick_CLKSourceConfig) for SysTick_CLKSourceConfig
+    delay_2.o(i.delay_init) refers to system_stm32f10x.o(.data) for SystemCoreClock
+    delay_2.o(i.delay_init) refers to delay_2.o(.data) for fac_us
+    delay_2.o(i.delay_ms) refers to delay_2.o(.data) for fac_ms
+    delay_2.o(i.delay_us) refers to delay_2.o(.data) for fac_us
+    usart_1.o(i.USART1_IRQHandler) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    usart_1.o(i.USART1_IRQHandler) refers to stm32f10x_usart.o(i.USART_GetITStatus) for USART_GetITStatus
+    usart_1.o(i.USART1_IRQHandler) refers to stm32f10x_usart.o(i.USART_ReceiveData) for USART_ReceiveData
+    usart_1.o(i.USART1_IRQHandler) refers to usart_1.o(.data) for USART_RX_STA
+    usart_1.o(i.USART1_IRQHandler) refers to usart_1.o(.bss) for USART_RX_BUF
+    usart_1.o(i.USART1_Send_Str) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    usart_1.o(i.USART1_Send_Str) refers to stm32f10x_usart.o(i.USART_SendData) for USART_SendData
+    usart_1.o(i.uart_init) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    usart_1.o(i.uart_init) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    usart_1.o(i.uart_init) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    usart_1.o(i.uart_init) refers to misc.o(i.NVIC_Init) for NVIC_Init
+    usart_1.o(i.uart_init) refers to stm32f10x_usart.o(i.USART_Init) for USART_Init
+    usart_1.o(i.uart_init) refers to stm32f10x_usart.o(i.USART_ITConfig) for USART_ITConfig
+    usart_1.o(i.uart_init) refers to stm32f10x_usart.o(i.USART_Cmd) for USART_Cmd
+    usart_1.o(.bss) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    usart_1.o(.data) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    use_no_semi_2.o(.text) refers (Special) to use_no_semi.o(.text) for __use_no_semihosting_swi
+    __2printf.o(.text) refers to _printf_char_file.o(.text) for _printf_char_file
+    __2printf.o(.text) refers to usart_1.o(.data) for __stdout
+    __2printf.o(.text) refers to stdio_streams.o(.bss) for __stdout
+    noretval__2printf.o(.text) refers to _printf_char_file.o(.text) for _printf_char_file
+    noretval__2printf.o(.text) refers to usart_1.o(.data) for __stdout
+    noretval__2printf.o(.text) refers to stdio_streams.o(.bss) for __stdout
+    __printf.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags.o(.text) refers to __printf_flags.o(.constdata) for .constdata
+    __printf_ss.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_ss.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_ss.o(.text) refers to __printf_flags_ss.o(.constdata) for .constdata
+    __printf_wp.o(.text) refers to __printf_wp.o(i._is_digit) for _is_digit
+    __printf_wp.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_wp.o(.text) refers to __printf_wp.o(i._is_digit) for _is_digit
+    __printf_flags_wp.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_wp.o(.text) refers to __printf_flags_wp.o(.constdata) for .constdata
+    __printf_ss_wp.o(.text) refers to __printf_wp.o(i._is_digit) for _is_digit
+    __printf_ss_wp.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_ss_wp.o(.text) refers to __printf_wp.o(i._is_digit) for _is_digit
+    __printf_flags_ss_wp.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_ss_wp.o(.text) refers to __printf_flags_ss_wp.o(.constdata) for .constdata
+    _printf_f.o(.ARM.Collect$$_printf_percent$$00000003) refers (Weak) to printf1.o(x$fpl$printf1) for _printf_fp_dec
+    _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) refers (Special) to _printf_percent_end.o(.ARM.Collect$$_printf_percent$$00000017) for _printf_percent_end
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    d2f.o(x$fpl$d2f) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    d2f.o(x$fpl$d2f) refers to fretinf.o(x$fpl$fretinf) for __fpl_fretinf
+    d2f.o(x$fpl$d2f) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    daddsub_clz.o(x$fpl$dadd) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    daddsub_clz.o(x$fpl$dadd) refers to daddsub_clz.o(x$fpl$dsub) for _dsub1
+    daddsub_clz.o(x$fpl$dadd) refers to dretinf.o(x$fpl$dretinf) for __fpl_dretinf
+    daddsub_clz.o(x$fpl$dadd) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    daddsub_clz.o(x$fpl$drsb) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    daddsub_clz.o(x$fpl$drsb) refers to daddsub_clz.o(x$fpl$dadd) for _dadd1
+    daddsub_clz.o(x$fpl$drsb) refers to daddsub_clz.o(x$fpl$dsub) for _dsub1
+    daddsub_clz.o(x$fpl$dsub) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    daddsub_clz.o(x$fpl$dsub) refers to daddsub_clz.o(x$fpl$dadd) for _dadd1
+    daddsub_clz.o(x$fpl$dsub) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    ddiv.o(x$fpl$drdiv) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    ddiv.o(x$fpl$drdiv) refers to ddiv.o(x$fpl$ddiv) for ddiv_entry
+    ddiv.o(x$fpl$ddiv) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    ddiv.o(x$fpl$ddiv) refers to dretinf.o(x$fpl$dretinf) for __fpl_dretinf
+    ddiv.o(x$fpl$ddiv) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    deqf.o(x$fpl$deqf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    deqf.o(x$fpl$deqf) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    deqf.o(x$fpl$deqf) refers to dcmpi.o(x$fpl$dcmpinf) for __fpl_dcmp_Inf
+    dfix.o(x$fpl$dfix) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dfix.o(x$fpl$dfix) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    dfix.o(x$fpl$dfixr) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dfix.o(x$fpl$dfixr) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    dfixu.o(x$fpl$dfixu) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dfixu.o(x$fpl$dfixu) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    dfixu.o(x$fpl$dfixur) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dfixu.o(x$fpl$dfixur) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    dflt_clz.o(x$fpl$dfltu) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dflt_clz.o(x$fpl$dflt) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dflt_clz.o(x$fpl$dfltn) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dleqf.o(x$fpl$dleqf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dleqf.o(x$fpl$dleqf) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    dleqf.o(x$fpl$dleqf) refers to dcmpi.o(x$fpl$dcmpinf) for __fpl_dcmp_Inf
+    dmul.o(x$fpl$dmul) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dmul.o(x$fpl$dmul) refers to dretinf.o(x$fpl$dretinf) for __fpl_dretinf
+    dmul.o(x$fpl$dmul) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    drleqf.o(x$fpl$drleqf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    drleqf.o(x$fpl$drleqf) refers to dleqf.o(x$fpl$dleqf) for __fpl_dcmple_InfNaN
+    faddsub_clz.o(x$fpl$fadd) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    faddsub_clz.o(x$fpl$fadd) refers to faddsub_clz.o(x$fpl$fsub) for _fsub1
+    faddsub_clz.o(x$fpl$fadd) refers to fretinf.o(x$fpl$fretinf) for __fpl_fretinf
+    faddsub_clz.o(x$fpl$fadd) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    faddsub_clz.o(x$fpl$frsb) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    faddsub_clz.o(x$fpl$frsb) refers to faddsub_clz.o(x$fpl$fadd) for _fadd1
+    faddsub_clz.o(x$fpl$frsb) refers to faddsub_clz.o(x$fpl$fsub) for _fsub1
+    faddsub_clz.o(x$fpl$fsub) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    faddsub_clz.o(x$fpl$fsub) refers to faddsub_clz.o(x$fpl$fadd) for _fadd1
+    faddsub_clz.o(x$fpl$fsub) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    ffix.o(x$fpl$ffix) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    ffix.o(x$fpl$ffix) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    ffix.o(x$fpl$ffixr) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    ffix.o(x$fpl$ffixr) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    ffixu.o(x$fpl$ffixu) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    ffixu.o(x$fpl$ffixu) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    ffixu.o(x$fpl$ffixur) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    ffixu.o(x$fpl$ffixur) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    fflt_clz.o(x$fpl$ffltu) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fflt_clz.o(x$fpl$fflt) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fflt_clz.o(x$fpl$ffltn) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fmul.o(x$fpl$fmul) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fmul.o(x$fpl$fmul) refers to fretinf.o(x$fpl$fretinf) for __fpl_fretinf
+    fmul.o(x$fpl$fmul) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    printf1.o(x$fpl$printf1) refers to _printf_fp_dec.o(.text) for _printf_fp_dec_real
+    pow.o(i.__softfp_pow) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    pow.o(i.__softfp_pow) refers to pow.o(i.pow) for pow
+    pow.o(i.pow) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    pow.o(i.pow) refers to dunder.o(i.__mathlib_dbl_infnan2) for __mathlib_dbl_infnan2
+    pow.o(i.pow) refers to _rserrno.o(.text) for __set_errno
+    pow.o(i.pow) refers to dunder.o(i.__mathlib_dbl_divzero) for __mathlib_dbl_divzero
+    pow.o(i.pow) refers to dunder.o(i.__mathlib_dbl_overflow) for __mathlib_dbl_overflow
+    pow.o(i.pow) refers to ddiv.o(x$fpl$ddiv) for __aeabi_ddiv
+    pow.o(i.pow) refers to sqrt.o(i.sqrt) for sqrt
+    pow.o(i.pow) refers to dmul.o(x$fpl$dmul) for __aeabi_dmul
+    pow.o(i.pow) refers to dunder.o(i.__mathlib_dbl_invalid) for __mathlib_dbl_invalid
+    pow.o(i.pow) refers to dunder.o(i.__mathlib_dbl_underflow) for __mathlib_dbl_underflow
+    pow.o(i.pow) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
+    pow.o(i.pow) refers to scalbn.o(x$fpl$scalbn) for __ARM_scalbn
+    pow.o(i.pow) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
+    pow.o(i.pow) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
+    pow.o(i.pow) refers to qnan.o(.constdata) for __mathlib_zero
+    pow.o(i.pow) refers to poly.o(i.__kernel_poly) for __kernel_poly
+    pow.o(i.pow) refers to dflt_clz.o(x$fpl$dflt) for __aeabi_i2d
+    pow.o(i.pow) refers to drleqf.o(x$fpl$drleqf) for __aeabi_cdrcmple
+    pow.o(i.pow) refers to pow.o(.constdata) for .constdata
+    pow.o(i.pow) refers to fpclassify.o(i.__ARM_fpclassify) for __ARM_fpclassify
+    pow.o(.constdata) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    pow_x.o(i.____softfp_pow$lsc) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    pow_x.o(i.____softfp_pow$lsc) refers to pow_x.o(i.__pow$lsc) for __pow$lsc
+    pow_x.o(i.__pow$lsc) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    pow_x.o(i.__pow$lsc) refers to dunder.o(i.__mathlib_dbl_infnan2) for __mathlib_dbl_infnan2
+    pow_x.o(i.__pow$lsc) refers to _rserrno.o(.text) for __set_errno
+    pow_x.o(i.__pow$lsc) refers to ddiv.o(x$fpl$ddiv) for __aeabi_ddiv
+    pow_x.o(i.__pow$lsc) refers to sqrt.o(i.sqrt) for sqrt
+    pow_x.o(i.__pow$lsc) refers to dmul.o(x$fpl$dmul) for __aeabi_dmul
+    pow_x.o(i.__pow$lsc) refers to dflt_clz.o(x$fpl$dflt) for __aeabi_i2d
+    pow_x.o(i.__pow$lsc) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
+    pow_x.o(i.__pow$lsc) refers to scalbn.o(x$fpl$scalbn) for __ARM_scalbn
+    pow_x.o(i.__pow$lsc) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
+    pow_x.o(i.__pow$lsc) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
+    pow_x.o(i.__pow$lsc) refers to qnan.o(.constdata) for __mathlib_zero
+    pow_x.o(i.__pow$lsc) refers to pow_x.o(.constdata) for .constdata
+    pow_x.o(i.__pow$lsc) refers to poly.o(i.__kernel_poly) for __kernel_poly
+    pow_x.o(i.__pow$lsc) refers to drleqf.o(x$fpl$drleqf) for __aeabi_cdrcmple
+    pow_x.o(.constdata) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    _rserrno.o(.text) refers to rt_errno_addr_intlibspace.o(.text) for __aeabi_errno_addr
+    _printf_fp_dec.o(.text) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    _printf_fp_dec.o(.text) refers (Special) to lc_numeric_c.o(locale$$code) for _get_lc_numeric
+    _printf_fp_dec.o(.text) refers to bigflt0.o(.text) for _btod_etento
+    _printf_fp_dec.o(.text) refers to btod.o(CL$$btod_d2e) for _btod_d2e
+    _printf_fp_dec.o(.text) refers to btod.o(CL$$btod_ediv) for _btod_ediv
+    _printf_fp_dec.o(.text) refers to btod.o(CL$$btod_emul) for _btod_emul
+    _printf_fp_dec.o(.text) refers to lludiv10.o(.text) for _ll_udiv10
+    _printf_fp_dec.o(.text) refers to fpclassify.o(i.__ARM_fpclassify) for __ARM_fpclassify
+    _printf_fp_dec.o(.text) refers to _printf_fp_infnan.o(.text) for _printf_fp_infnan
+    _printf_fp_dec.o(.text) refers to rt_locale_intlibspace.o(.text) for __rt_locale
+    _printf_char_file.o(.text) refers to _printf_char_common.o(.text) for _printf_char_common
+    _printf_char_file.o(.text) refers to ferror.o(.text) for ferror
+    _printf_char_file.o(.text) refers to fputc.o(i.fputc) for fputc
+    dcmpi.o(x$fpl$dcmpinf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dnaninf.o(x$fpl$dnaninf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dretinf.o(x$fpl$dretinf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fnaninf.o(x$fpl$fnaninf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fretinf.o(x$fpl$fretinf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    scalbn.o(x$fpl$scalbn) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    scalbn.o(x$fpl$scalbn) refers to dcheck1.o(x$fpl$dcheck1) for __fpl_dcheck_NaN1
+    dunder.o(i.__mathlib_dbl_divzero) refers to ddiv.o(x$fpl$ddiv) for __aeabi_ddiv
+    dunder.o(i.__mathlib_dbl_infnan) refers to scalbn.o(x$fpl$scalbn) for __ARM_scalbn
+    dunder.o(i.__mathlib_dbl_infnan2) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
+    dunder.o(i.__mathlib_dbl_invalid) refers to ddiv.o(x$fpl$ddiv) for __aeabi_ddiv
+    dunder.o(i.__mathlib_dbl_overflow) refers to scalbn.o(x$fpl$scalbn) for __ARM_scalbn
+    dunder.o(i.__mathlib_dbl_posinfnan) refers to dmul.o(x$fpl$dmul) for __aeabi_dmul
+    dunder.o(i.__mathlib_dbl_underflow) refers to scalbn.o(x$fpl$scalbn) for __ARM_scalbn
+    fpclassify.o(i.__ARM_fpclassify) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    poly.o(i.__kernel_poly) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    poly.o(i.__kernel_poly) refers to dmul.o(x$fpl$dmul) for __aeabi_dmul
+    poly.o(i.__kernel_poly) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
+    qnan.o(.constdata) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    sqrt.o(i.__softfp_sqrt) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    sqrt.o(i.__softfp_sqrt) refers to dsqrt_noumaal.o(x$fpl$dsqrt) for _dsqrt
+    sqrt.o(i.__softfp_sqrt) refers to _rserrno.o(.text) for __set_errno
+    sqrt.o(i.sqrt) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    sqrt.o(i.sqrt) refers to dsqrt_noumaal.o(x$fpl$dsqrt) for _dsqrt
+    sqrt.o(i.sqrt) refers to _rserrno.o(.text) for __set_errno
+    sqrt_x.o(i.____softfp_sqrt$lsc) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    sqrt_x.o(i.____softfp_sqrt$lsc) refers to dleqf.o(x$fpl$dleqf) for __aeabi_cdcmple
+    sqrt_x.o(i.____softfp_sqrt$lsc) refers to _rserrno.o(.text) for __set_errno
+    sqrt_x.o(i.____softfp_sqrt$lsc) refers to dsqrt_noumaal.o(x$fpl$dsqrt) for _dsqrt
+    sqrt_x.o(i.__sqrt$lsc) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    sqrt_x.o(i.__sqrt$lsc) refers to dleqf.o(x$fpl$dleqf) for __aeabi_cdcmple
+    sqrt_x.o(i.__sqrt$lsc) refers to _rserrno.o(.text) for __set_errno
+    sqrt_x.o(i.__sqrt$lsc) refers to dsqrt_noumaal.o(x$fpl$dsqrt) for _dsqrt
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to main.o(i.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    rt_locale.o(.text) refers to rt_locale.o(.bss) for __rt_locale_data
+    rt_locale_intlibspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rt_errno_addr.o(.text) refers to rt_errno_addr.o(.bss) for __aeabi_errno_addr_data
+    rt_errno_addr_intlibspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    _printf_char_common.o(.text) refers to __printf_flags_wp.o(.text) for __printf
+    bigflt0.o(.text) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    bigflt0.o(.text) refers to btod.o(CL$$btod_emul) for _btod_emul
+    bigflt0.o(.text) refers to btod.o(CL$$btod_ediv) for _btod_ediv
+    bigflt0.o(.text) refers to bigflt0.o(.constdata) for .constdata
+    bigflt0.o(.constdata) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_d2e) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_d2e) refers to btod.o(CL$$btod_d2e_norm_op1) for _d2e_norm_op1
+    btod.o(CL$$btod_d2e_norm_op1) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_d2e_norm_op1) refers to btod.o(CL$$btod_d2e_denorm_low) for _d2e_denorm_low
+    btod.o(CL$$btod_d2e_denorm_low) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_emul) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_emul) refers to btod.o(CL$$btod_mult_common) for __btod_mult_common
+    btod.o(CL$$btod_emul) refers to btod.o(CL$$btod_e2e) for _e2e
+    btod.o(CL$$btod_ediv) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_ediv) refers to btod.o(CL$$btod_div_common) for __btod_div_common
+    btod.o(CL$$btod_ediv) refers to btod.o(CL$$btod_e2e) for _e2e
+    btod.o(CL$$btod_emuld) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_emuld) refers to btod.o(CL$$btod_mult_common) for __btod_mult_common
+    btod.o(CL$$btod_emuld) refers to btod.o(CL$$btod_e2d) for _e2d
+    btod.o(CL$$btod_edivd) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_edivd) refers to btod.o(CL$$btod_div_common) for __btod_div_common
+    btod.o(CL$$btod_edivd) refers to btod.o(CL$$btod_e2d) for _e2d
+    btod.o(CL$$btod_e2e) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_e2d) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_e2d) refers to btod.o(CL$$btod_e2e) for _e2e
+    btod.o(CL$$btod_mult_common) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_div_common) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fputc.o(i.fputc) refers to flsbuf.o(.text) for __flsbuf_byte
+    lc_numeric_c.o(locale$$data) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000016) for __rt_lib_init_lc_numeric_2
+    lc_numeric_c.o(locale$$code) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000016) for __rt_lib_init_lc_numeric_2
+    lc_numeric_c.o(locale$$code) refers to strcmpv7m.o(.text) for strcmp
+    lc_numeric_c.o(locale$$code) refers to lc_numeric_c.o(locale$$data) for __lcnum_c_name
+    dcheck1.o(x$fpl$dcheck1) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dcheck1.o(x$fpl$dcheck1) refers to retnan.o(x$fpl$retnan) for __fpl_return_NaN
+    dsqrt_noumaal.o(x$fpl$dsqrt) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dsqrt_noumaal.o(x$fpl$dsqrt) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    istatus.o(x$fpl$ieeestatus) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_stm32f10x_md.o(.text) for __user_initial_stackheap
+    flsbuf.o(.text) refers to stdio.o(.text) for _deferredlazyseek
+    flsbuf.o(.text) refers to sys_io.o(.text) for _sys_flen
+    flsbuf.o(.text) refers to h1_alloc.o(.text) for malloc
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002C) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000002) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000A) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000011) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000033) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_user_alloc_1
+    libinit2.o(.ARM.Collect$$libinit$$00000005) refers (Weak) to init_alloc.o(.text) for _init_alloc
+    libinit2.o(.ARM.Collect$$libinit$$0000000F) refers (Weak) to rt_locale_intlibspace.o(.text) for __rt_locale
+    libinit2.o(.ARM.Collect$$libinit$$00000010) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers (Weak) to lc_numeric_c.o(locale$$code) for _get_lc_numeric
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000024) refers (Weak) to initio.o(.text) for _initio
+    libinit2.o(.ARM.Collect$$libinit$$00000026) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000027) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    flsbuf_fwide.o(.text) refers to flsbuf.o(.text) for __flsbuf
+    retnan.o(x$fpl$retnan) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    retnan.o(x$fpl$retnan) refers to trapv.o(x$fpl$trapveneer) for __fpl_cmpreturn
+    sys_io.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_io.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_io.o(.text) refers to strlen.o(.text) for strlen
+    sys_io.o(.constdata) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_io.o(.constdata) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_io.o(.constdata) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_io.o(.constdata) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_io.o(.constdata) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_io.o(.constdata) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    malloc.o(.text) refers (Special) to hguard.o(.text) for __heap$guard
+    malloc.o(.text) refers (Special) to init_alloc.o(.text) for _init_alloc
+    malloc.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    malloc.o(.text) refers to heapstubs.o(.text) for __Heap_Alloc
+    h1_alloc.o(.text) refers (Special) to h1_init.o(.text) for __Heap_Initialize
+    h1_alloc.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    h1_alloc.o(.text) refers to init_alloc.o(.text) for __Heap_Full
+    h1_alloc_mt.o(.text) refers (Special) to h1_init.o(.text) for __Heap_Initialize
+    h1_alloc_mt.o(.text) refers to init_alloc.o(.text) for __Heap_Full
+    h1_alloc_mt.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2.o(i._FDIterate) refers to heap2.o(.conststring) for .conststring
+    heap2.o(i.___Heap_ProvideMemory$realtime) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2.o(i.___Heap_ProvideMemory$realtime) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2.o(i.___Heap_Stats$realtime) refers to heap2.o(i._Heap2_StatsIterate) for _Heap2_StatsIterate
+    heap2.o(i.___Heap_Valid$realtime) refers to heap2.o(i._FDIterate) for _FDIterate
+    heap2.o(i.___Heap_Valid$realtime) refers to heap2.o(.conststring) for .conststring
+    heap2.o(i._free$realtime) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2.o(i._free$realtime) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2.o(i._free$realtime) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2.o(i._malloc$realtime) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2.o(i._malloc$realtime) refers to fdtree.o(i._FDTree_FindFirst) for _FDTree_FindFirst
+    heap2.o(i._malloc$realtime) refers to init_alloc.o(.text) for __Heap_Full
+    heap2.o(i._malloc$realtime) refers to fdtree.o(i._FDTree_RemoveNode) for _FDTree_RemoveNode
+    heap2.o(i._malloc$realtime) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2.o(i._posix_memalign$realtime) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2.o(i._posix_memalign$realtime) refers to fdtree.o(i._FDTree_FindFirst) for _FDTree_FindFirst
+    heap2.o(i._posix_memalign$realtime) refers to init_alloc.o(.text) for __Heap_Full
+    heap2.o(i._posix_memalign$realtime) refers to fdtree.o(i._FDTree_RemoveNode) for _FDTree_RemoveNode
+    heap2.o(i._posix_memalign$realtime) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2.o(i._realloc$realtime) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2.o(i._realloc$realtime) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2.o(i._realloc$realtime) refers to h1_free.o(.text) for free
+    heap2.o(i._realloc$realtime) refers to h1_alloc.o(.text) for malloc
+    heap2.o(i._realloc$realtime) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2.o(i._realloc$realtime) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    heap2mt.o(i._FDIterate) refers to heap2mt.o(.conststring) for .conststring
+    heap2mt.o(i.___Heap_Initialize$realtime$concurrent) refers to mutex_dummy.o(.text) for _mutex_initialize
+    heap2mt.o(i.___Heap_ProvideMemory$realtime$concurrent) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2mt.o(i.___Heap_ProvideMemory$realtime$concurrent) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2mt.o(i.___Heap_Stats$realtime$concurrent) refers to heap2mt.o(i._Heap2_StatsIterate) for _Heap2_StatsIterate
+    heap2mt.o(i.___Heap_Valid$realtime$concurrent) refers to heap2mt.o(i._FDIterate) for _FDIterate
+    heap2mt.o(i.___Heap_Valid$realtime$concurrent) refers to heap2mt.o(.conststring) for .conststring
+    heap2mt.o(i._free$realtime$concurrent) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2mt.o(i._free$realtime$concurrent) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2mt.o(i._free$realtime$concurrent) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2mt.o(i._malloc$realtime$concurrent) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2mt.o(i._malloc$realtime$concurrent) refers to fdtree.o(i._FDTree_FindFirst) for _FDTree_FindFirst
+    heap2mt.o(i._malloc$realtime$concurrent) refers to init_alloc.o(.text) for __Heap_Full
+    heap2mt.o(i._malloc$realtime$concurrent) refers to fdtree.o(i._FDTree_RemoveNode) for _FDTree_RemoveNode
+    heap2mt.o(i._malloc$realtime$concurrent) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2mt.o(i._posix_memalign$realtime$concurrent) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2mt.o(i._posix_memalign$realtime$concurrent) refers to fdtree.o(i._FDTree_FindFirst) for _FDTree_FindFirst
+    heap2mt.o(i._posix_memalign$realtime$concurrent) refers to init_alloc.o(.text) for __Heap_Full
+    heap2mt.o(i._posix_memalign$realtime$concurrent) refers to fdtree.o(i._FDTree_RemoveNode) for _FDTree_RemoveNode
+    heap2mt.o(i._posix_memalign$realtime$concurrent) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2mt.o(i._realloc$realtime$concurrent) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2mt.o(i._realloc$realtime$concurrent) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2mt.o(i._realloc$realtime$concurrent) refers to h1_free.o(.text) for free
+    heap2mt.o(i._realloc$realtime$concurrent) refers to h1_alloc.o(.text) for malloc
+    heap2mt.o(i._realloc$realtime$concurrent) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2mt.o(i._realloc$realtime$concurrent) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    _printf_char_file_locked.o(.text) refers to _printf_char_common.o(.text) for _printf_char_common
+    _printf_char_file_locked.o(.text) refers to fputc.o(i._fputc$unlocked) for _fputc$unlocked
+    stdio.o(.text) refers to sys_io.o(.text) for _sys_seek
+    fwritefast.o(.text) refers to stdio.o(.text) for _writebuf
+    fwritefast.o(.text) refers to flsbuf.o(.text) for __flsbuf_byte
+    fwritefast.o(.text) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    fwritefast_locked.o(.text) refers to stdio.o(.text) for _writebuf
+    fwritefast_locked.o(.text) refers to flsbuf.o(.text) for __flsbuf_byte
+    fwritefast_locked.o(.text) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    assert_stdio.o(.text) refers to fputs.o(.text) for fputs
+    assert_stdio.o(.text) refers to fflush.o(.text) for fflush
+    assert_stdio.o(.text) refers to stdio_streams.o(.bss) for __stderr
+    argv_veneer.o(.emb_text) refers to no_argv.o(.text) for __ARM_get_argv
+    trapv.o(x$fpl$trapveneer) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    rt_heap_descriptor.o(.text) refers to rt_heap_descriptor.o(.bss) for __rt_heap_descriptor_data
+    rt_heap_descriptor_intlibspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    init_alloc.o(.text) refers (Special) to hguard.o(.text) for __heap$guard
+    init_alloc.o(.text) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000005) for __rt_lib_init_heap_2
+    init_alloc.o(.text) refers (Special) to maybetermalloc1.o(.emb_text) for _maybe_terminate_alloc
+    init_alloc.o(.text) refers to h1_extend.o(.text) for __Heap_ProvideMemory
+    init_alloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    init_alloc.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    init_alloc.o(.text) refers to h1_init.o(.text) for __Heap_Initialize
+    free.o(.text) refers (Special) to hguard.o(.text) for __heap$guard
+    free.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    free.o(.text) refers to heapstubs.o(.text) for __Heap_Free
+    h1_free.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    h1_init_mt.o(.text) refers to mutex_dummy.o(.text) for _mutex_initialize
+    h1_free_mt.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    fflush.o(.text) refers to stdio.o(.text) for _fflush
+    fflush.o(.text) refers to fseek.o(.text) for _fseek
+    fflush.o(.text) refers to stdio_streams.o(.bss) for __stdin
+    fputs.o(.text) refers to fputc.o(i.fputc) for fputc
+    stdio_streams.o(.bss) refers (Special) to initio.o(.text) for _initio
+    stdio_streams.o(.bss) refers (Special) to initio.o(.text) for _initio
+    stdio_streams.o(.bss) refers (Special) to initio.o(.text) for _initio
+    stdio_streams.o(.data) refers (Special) to initio.o(.text) for _initio
+    stdio_streams.o(.data) refers (Special) to initio.o(.text) for _initio
+    stdio_streams.o(.data) refers (Special) to initio.o(.text) for _initio
+    fflush_locked.o(.text) refers to stdio.o(.text) for _fflush
+    fflush_locked.o(.text) refers to fseek.o(.text) for _fseek
+    fflush_locked.o(.text) refers to fflush.o(.text) for _do_fflush
+    fflush_locked.o(.text) refers to streamlock.o(.data) for _stream_list_lock
+    fflush_locked.o(.text) refers to stdio_streams.o(.bss) for __stdin
+    rt_memcpy_v6.o(.text) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    _get_argv.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv.o(.text) refers to h1_alloc.o(.text) for malloc
+    _get_argv.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    maybetermalloc2.o(.emb_text) refers (Special) to term_alloc.o(.text) for _terminate_alloc
+    h1_extend.o(.text) refers to h1_free.o(.text) for free
+    h1_extend_mt.o(.text) refers to h1_free_mt.o(.text) for _free_internal
+    fseek.o(.text) refers to sys_io.o(.text) for _sys_istty
+    fseek.o(.text) refers to ftell.o(.text) for _ftell_internal
+    fseek.o(.text) refers to stdio.o(.text) for _seterr
+    streamlock.o(.data) refers (Special) to initio.o(.text) for _initio
+    initio.o(.text) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000024) for __rt_lib_init_stdio_2
+    initio.o(.text) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_stdio_2
+    initio.o(.text) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    initio.o(.text) refers to fopen.o(.text) for freopen
+    initio.o(.text) refers to defsig_rtred_outer.o(.text) for __rt_SIGRTRED
+    initio.o(.text) refers to setvbuf.o(.text) for setvbuf
+    initio.o(.text) refers to fclose.o(.text) for _fclose_internal
+    initio.o(.text) refers to h1_free.o(.text) for free
+    initio.o(.text) refers to stdio_streams.o(.bss) for __stdin
+    initio.o(.text) refers to usart_1.o(.data) for __stdout
+    initio.o(.text) refers to stdio_streams.o(.bss) for __stdout
+    initio.o(.text) refers to stdio_streams.o(.bss) for __stderr
+    initio.o(.text) refers to stdio_streams.o(.data) for __aeabi_stdin
+    initio.o(.text) refers to stdio_streams.o(.data) for __aeabi_stdout
+    initio.o(.text) refers to stdio_streams.o(.data) for __aeabi_stderr
+    initio.o(.text) refers to sys_io.o(.constdata) for __stdin_name
+    initio.o(.text) refers to sys_io.o(.constdata) for __stdout_name
+    initio.o(.text) refers to sys_io.o(.constdata) for __stderr_name
+    initio_locked.o(.text) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000024) for __rt_lib_init_stdio_2
+    initio_locked.o(.text) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_stdio_2
+    initio_locked.o(.text) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    initio_locked.o(.text) refers to fopen.o(.text) for freopen
+    initio_locked.o(.text) refers to defsig_rtred_outer.o(.text) for __rt_SIGRTRED
+    initio_locked.o(.text) refers to setvbuf.o(.text) for setvbuf
+    initio_locked.o(.text) refers to fclose.o(.text) for _fclose_internal
+    initio_locked.o(.text) refers to h1_free.o(.text) for free
+    initio_locked.o(.text) refers to stdio_streams.o(.bss) for __stdin
+    initio_locked.o(.text) refers to usart_1.o(.data) for __stdout
+    initio_locked.o(.text) refers to stdio_streams.o(.bss) for __stdout
+    initio_locked.o(.text) refers to stdio_streams.o(.bss) for __stderr
+    initio_locked.o(.text) refers to stdio_streams.o(.data) for __aeabi_stdin
+    initio_locked.o(.text) refers to stdio_streams.o(.data) for __aeabi_stdout
+    initio_locked.o(.text) refers to stdio_streams.o(.data) for __aeabi_stderr
+    initio_locked.o(.text) refers to streamlock.o(.data) for _stream_list_lock
+    initio_locked.o(.text) refers to sys_io.o(.constdata) for __stdin_name
+    initio_locked.o(.text) refers to sys_io.o(.constdata) for __stdout_name
+    initio_locked.o(.text) refers to sys_io.o(.constdata) for __stderr_name
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    heapauxa.o(.text) refers to heapauxa.o(.data) for .data
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000006) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000009) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000003) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000B) for __rt_lib_shutdown_user_alloc_1
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    term_alloc.o(.text) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000D) for __rt_lib_shutdown_heap_2
+    term_alloc.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    term_alloc.o(.text) refers to h1_final.o(.text) for __Heap_Finalize
+    ftell.o(.text) refers to rt_errno_addr_intlibspace.o(.text) for __aeabi_errno_addr
+    fopen.o(.text) refers to fclose.o(.text) for _fclose_internal
+    fopen.o(.text) refers to sys_io.o(.text) for _sys_open
+    fopen.o(.text) refers to fseek.o(.text) for _fseek
+    fopen.o(.text) refers to h1_alloc.o(.text) for malloc
+    fopen.o(.text) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    fopen.o(.text) refers to stdio_streams.o(.bss) for __stdin
+    fclose.o(.text) refers to stdio.o(.text) for _fflush
+    fclose.o(.text) refers to sys_io.o(.text) for _sys_close
+    fclose.o(.text) refers to h1_free.o(.text) for free
+    fclose.o(.text) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    fopen_locked.o(.text) refers to fclose.o(.text) for _fclose_internal
+    fopen_locked.o(.text) refers to sys_io.o(.text) for _sys_open
+    fopen_locked.o(.text) refers to fseek.o(.text) for _fseek
+    fopen_locked.o(.text) refers to h1_alloc.o(.text) for malloc
+    fopen_locked.o(.text) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    fopen_locked.o(.text) refers to streamlock.o(.data) for _stream_list_lock
+    fopen_locked.o(.text) refers to stdio_streams.o(.bss) for __stdin
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_rtred_outer.o(.text) refers to defsig_rtred_inner.o(.text) for __rt_SIGRTRED_inner
+    defsig_rtred_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtred_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) refers (Weak) to initio.o(.text) for _terminateio
+    libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) refers (Weak) to term_alloc.o(.text) for _terminate_alloc
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig.o(CL$$defsig) refers to defsig_rtred_inner.o(.text) for __rt_SIGRTRED_inner
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+
